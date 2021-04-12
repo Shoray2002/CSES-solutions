@@ -1,15 +1,17 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-
 int main()
 {
-  long long int n, s = 0, ele;
+  long n;
   cin >> n;
-  for (int i = 0; i < n - 1; i++)
+  cout << n << " ";
+  while (n != 1)
   {
-    cin >> ele;
-    s += ele;
+    if (n % 2 == 0)
+      n /= 2;
+    else
+      n = n * 3 + 1;
+
+    cout << n << " ";
   }
-  cout << n * (n + 1) / 2 - s;
-  return 0;
 }
